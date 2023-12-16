@@ -1,13 +1,14 @@
-const fs = require("fs-extra");
-const ejs = require("ejs");
-const argv = require("yargs-parser")(process.argv.slice(2));
 const path = require("path");
-const { generateGitignore } = require("./gen-gitignore.js")
+const { generateGitignore } = require("./generators/gen-gitignore.js")
+const { generateReadme } = require("./generators/gen-readme.js")
 
 const main = () => {
     console.log("Generating files...");
     try {
-        generateGitignore();
+        const repoName = path.basename(process.cwd());
+
+        generateGitignore(repoName);
+        generateReadme(repoName);
     } catch(err) {
         console.error(err);
     }
