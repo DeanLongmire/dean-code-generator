@@ -1,4 +1,4 @@
-# dean-code-generator 1.0.1
+# dean-code-generator 1.0.2
 
 [NPM Package](https://www.npmjs.com/package/dean-generator)
 
@@ -11,4 +11,4 @@ I only have one so far and it's very limited but I plan on expanding on this lat
 dean-generator cargo
 ```
 
-Initializes a new cargo project along with a readme and gitignore
+Initializes a new cargo project along with a readme, gitignore, and github workflows

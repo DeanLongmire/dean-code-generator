@@ -1,6 +1,7 @@
 const path = require("path");
-const { generateGitignore } = require("./generators/gen-gitignore.js")
-const { generateReadme } = require("./generators/gen-readme.js")
+const { generateGitignore } = require("./generators/gen-gitignore.js");
+const { generateReadme } = require("./generators/gen-readme.js");
+const { generateWorkflows } = require("./generators/gen-workflows.js");
 const { exec } = require('child_process');
 
 function generateCargoRust() {
@@ -15,17 +16,11 @@ function generateCargoRust() {
               console.error(`Error executing command: ${error.message}`);
               return;
             }
-
-            if (stderr) {
-                console.error(`Command stderr: ${stderr}`);
-                return;
-            }
-            
-              console.log(`Command output: ${stdout}`);
         });
 
         generateGitignore(repoName);
         generateReadme(repoName);
+        generateWorkflows();
     } catch(err) {
         console.error(err);
     }
