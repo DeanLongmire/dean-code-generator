@@ -1,5 +1,5 @@
 {
-  "name": "dean-code-generator",
+  "name": "dean-generator",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
@@ -25,5 +25,6 @@
   "keywords": [
     "cli",
     "generator"
-  ]
+  ],
+  "bin": "src/cli.js"
 }
