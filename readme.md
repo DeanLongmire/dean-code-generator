@@ -1,6 +1,7 @@
 # dean-code-generator 1.0.2
 
 [NPM Package](https://www.npmjs.com/package/dean-generator)
+
 `npm install dean-generator`
 
 ## Usage
