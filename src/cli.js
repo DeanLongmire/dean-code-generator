@@ -10,7 +10,7 @@ const main = () => {
 
         const cases = {
             'cargo': () => generateCargoRust(),
-            'default': () => console.log("Usage error"),
+            'default': () => console.log("Usage error: dean-generator cargo"),
         };
         
         (cases[generator] || cases['default'])();
